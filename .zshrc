@@ -33,10 +33,4 @@ if [ ! -d /home/$USER/.config/tmux/plugins/catppuccin/tmux ]; then
   git clone https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 fi
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/jags.toml)"
-eval "$(zoxide init zsh)"
+source .zshrc.arch
