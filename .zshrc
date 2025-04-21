@@ -33,4 +33,4 @@ if [ ! -d /home/$USER/.config/tmux/plugins/catppuccin/tmux ]; then
   git clone https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 fi
 
-source .zshrc.arch
+source ~/.zshrc.arch
