@@ -34,3 +34,8 @@ if [ ! -d /home/$USER/.config/tmux/plugins/catppuccin/tmux ]; then
 fi
 
 source ~/.zshrc.arch
+
+# Activating Virtual environment if exists
+if [ -d $PWD/.venv ]; then
+  source .venv/bin/activate
+fi
