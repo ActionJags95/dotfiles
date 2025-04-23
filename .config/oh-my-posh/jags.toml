@@ -46,7 +46,6 @@ newline = true
   trailing_diamond = ""
   template = "{{.Icon }} "
   
-  
 
   # Directory Structure
   [[blocks.segments]]
@@ -96,8 +95,9 @@ overflow = "hidden"
   style = "diamond"
   leading_diamond = ""
   foreground = "p:base"
-  background = "p:blue"
+  background = "p:green"
   template = "  {{ .Full }} "
+
   ## Python -> only works in virtual envs
   [[blocks.segments]]
   type = "python"
