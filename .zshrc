@@ -33,9 +33,11 @@ if [ ! -d /home/$USER/.config/tmux/plugins/catppuccin/tmux ]; then
   git clone https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 fi
 
-source ~/.zshrc.arch
+OS_NAME="$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"' | tr '[:upper:]' '[:lower:]')"
+source ~/.zshrc.$OS_NAME
 
 # Activating Virtual environment if exists
 if [ -d $PWD/.venv ]; then
   source .venv/bin/activate
 fi
+
