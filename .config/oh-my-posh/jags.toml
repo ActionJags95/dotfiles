@@ -124,7 +124,7 @@ overflow = "hidden"
   leading_diamond = ""
   trailing_diamond = ""
   foreground = "p:base"
-  background = "p:green"
+  background = "p:blue"
     [blocks.segments.properties]
     time_format = " 15:04"
 
