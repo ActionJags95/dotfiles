@@ -1,0 +1,36 @@
+@import './macchiato.css';
+
+window#waybar.top {
+  color: @text;
+  background-color: @base;
+  border-radius: 13px;
+  padding-top:100px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Noto Sans Bold";
+  border: 2px solid @blue;
+}
+
+tooltip {
+  background: @base;
+  border: 2px solid @mauve;
+  font-family: JetBrainsMono Nerd Font;
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces {
+  background-color: @surface0;
+  color: @text;
+  margin: 7px 7px;
+  border-radius: 10px;
+}
+#workspaces button.active {
+  background: @blue;
+  border-radius: 10px;
+}
+
+label.module{
+  padding: 0px 15px;
+}

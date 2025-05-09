@@ -1,0 +1,63 @@
+{
+  "layer": "top",
+  "margin-top": 5,
+  "margin-left": 9,
+  "margin-right": 9,
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": ["battery", "backlight", "wireplumber", "group/sysmonitor"],
+
+  "group/sysmonitor": {
+    "orientation": "horizontal",
+    "modules": ["network", "bluetooth", "custom/loginctl"],
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "clock": {
+    "format": "{:%A, %B %d, %R}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col"  : 3,
+      "weeks-pos"     : "right",
+      "on-scroll"     : 1,
+      "format": {
+      "months":     "<span color='#ffead3'><b>{}</b></span>",
+      "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+      "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+      "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+      "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-scroll-up": "tz_up",
+      "on-scroll-down": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon} {percent}%",
+    "format-alt": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰸈",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "on-click": "pavucontrol"
+  },
+  "custom/loginctl": {
+    "format": "{icon}",
+    "format-icons": "⏻ ",
+    "on-click": "wlogout"
+  }
+}

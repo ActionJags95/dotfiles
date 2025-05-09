@@ -41,3 +41,5 @@ if [ -d $PWD/.venv ]; then
   source .venv/bin/activate
 fi
 
+
+export PATH=$PATH:/home/jags/.spicetify
