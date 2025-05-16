@@ -104,7 +104,7 @@ overflow = "hidden"
   style = "diamond"
   leading_diamond = ""
   foreground = "p:base"
-  background = "p:blue"
+  background = "p:green"
   template = " {{ .Full }} "
   ##
 
