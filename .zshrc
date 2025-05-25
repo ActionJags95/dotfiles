@@ -44,3 +44,4 @@ fi
 
 export PATH=$PATH:/home/jags/.spicetify
 export EDITOR=nvim
+source ~/.zshrc.aliases

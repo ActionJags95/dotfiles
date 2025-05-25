@@ -1,0 +1,9 @@
+alias code="/usr/bin/code --enable-features=UseOzonePlatform --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto --unity-launch %F" 
+
+# Git aliases
+alias gs="git status"
+alias gc="git commit"
+alias gp="git push"
+alias ga="git add"
+alias gr="git restore"
+alias gch="git checkout"
