@@ -14,7 +14,7 @@ window#waybar.top {
 tooltip {
   background: @base;
   border: 2px solid @mauve;
-  font-family: Hasklug Nerd Font;
+  font-family: JetBrainsMono Nerd Font;
 }
 tooltip label {
   color: white;
