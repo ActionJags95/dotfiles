@@ -62,11 +62,11 @@ newline = true
 
       [blocks.segments.properties.mapped_locations]
       "~" = " "
-      "~/Downloads" = " "
+      "~/Downloads" = ""
       "~/Code" = " "
-      "~/Code/Git" = " "
-      "~/Pictures" = " "
-      "~/Documents" = "󰈙 "
+      "~/Code/Git" = ""
+      "~/Pictures" = ""
+      "~/Documents" = "󰈙"
       "~/Desktop" = " "
   # git
 
