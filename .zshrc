@@ -33,6 +33,7 @@ if [ ! -d /home/$USER/.config/tmux/plugins/catppuccin/tmux ]; then
   git clone https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 fi
 
+# Activating os-based .rc file
 OS_NAME="$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"' | tr '[:upper:]' '[:lower:]')"
 source ~/.zshrc.$OS_NAME
 
