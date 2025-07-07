@@ -1,0 +1,18 @@
+1. Colors --done
+2. Auto pairing braces --done
+3. Code suggesstions and completions
+4. Syntax highlighting --done, (treesitter-text-objects added and need to be configured)
+5. Git integration and highlighting --Need to go through gitsigns docs, and configure gitsigns, LazyGit needs to be added and configured
+6. Terminal integration --done, need config
+7. Filetree and file-explorer
+8. Find and replace
+9. Commenting --done but need to dive deeper and need to work on triggering comment on empty line
+10. Code folding
+11. LSP, formatters and linters
+12. Buffer management --done but need go through docs, configs and keymaps
+13. Greet page
+14. Notifications --done but need configuration
+15. Todo comments --done
+16. Lualine --done
+17. Floating nvim cmd
+18. Indentation guides --done and need deep dive into docs and configs
