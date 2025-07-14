@@ -46,3 +46,10 @@ fi
 export PATH=$PATH:/home/jags/.spicetify
 export EDITOR=nvim
 source ~/.zshrc.aliases
+
+# bun completions
+[ -s "/home/jags/.bun/_bun" ] && source "/home/jags/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
