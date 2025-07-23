@@ -5,7 +5,7 @@ return {
     lazy = false,
     build = ":TSUpdate",
     event = { "BufReadPre", "BufNewFile" }, -- Loading only when a file is opened or new file is created
-    
+
     config = function()
       require("nvim-treesitter.configs").setup {
         -- List of parsers need to installed

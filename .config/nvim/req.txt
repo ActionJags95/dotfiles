@@ -1,6 +1,6 @@
 1. Colors --done
 2. Auto pairing braces --done
-3. Code suggesstions and completions
+3. Code suggesstions and completions --used blink.cmp, need to deepdive the docs and customize to requirements
 4. Syntax highlighting --done, (treesitter-text-objects added and need to be configured)
 5. Git integration and highlighting --Need to go through gitsigns docs, and configure gitsigns, LazyGit needs to be added and configured
 6. Terminal integration --done, need config
@@ -8,7 +8,7 @@
 8. Find and replace
 9. Commenting --done but need to dive deeper and need to work on triggering comment on empty line
 10. Code folding
-11. LSP, formatters and linters
+11. LSP, formatters and linters --setup done, need to deepdive the documentation and do more customization
 12. Buffer management --done but need go through docs, configs and keymaps
 13. Greet page
 14. Notifications --done but need configuration
