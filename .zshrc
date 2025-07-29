@@ -53,3 +53,5 @@ source ~/.zshrc.aliases
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+stty -ixon
