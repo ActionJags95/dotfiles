@@ -17,7 +17,7 @@ vim.keymap.set("n", "<C-q>", "<cmd> q <CR>", opts)
 vim.keymap.set("n", "<Up>", ":resize -2<CR>", opts)
 vim.keymap.set("n", "<Down>", ":resize +2<CR>", opts)
 vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>", opts)
-vim.keymap.set("n", "<Right>", ":resize +2<CR>", opts)
+vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", opts)
 
 -- Buffers
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", opts)
