@@ -36,8 +36,8 @@ return {
           preset = "none",
         },
         completion = {
-          menu = { auto_show = true },
-          ghost_text = { enabled = true },
+          menu = { auto_show = false },
+          ghost_text = { enabled = false },
         },
       },
 
@@ -47,10 +47,6 @@ return {
         documentation = {
           auto_show = true,
           auto_show_delay_ms = 0,
-          {
-            border = "rounded",
-            winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpDocCursorLine,Search:None",
-          },
         },
 
         ghost_text = { enabled = false },
@@ -61,9 +57,6 @@ return {
         menu = {
           -- Don't automatically show the completion menu
           auto_show = true,
-
-          -- Rounded borders
-          border = "rounded",
 
           -- nvim-cmp style completion menu
           draw = {
