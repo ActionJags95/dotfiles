@@ -15,8 +15,12 @@ return {
       width = 30,
     },
     keymaps = {
-      vim.keymap.set("n", "<leader>eo", ":Neotree<CR>", { noremap = true, silent = true }),
-      vim.keymap.set("n", "<leader>ec", ":Neotree close<CR>", { noremap = true, silent = true }),
+      vim.keymap.set(
+        "n",
+        "<leader>e",
+        ":Neotree toggle<CR>",
+        { noremap = true, silent = true, desc = "Toggle NeoTree" }
+      ),
     },
     filesystem = {
       filtered_items = {
