@@ -16,12 +16,14 @@ return {
       telescope.setup({
         defaults = {
           path_display = { "smart" },
-          mappings = {
-            -- Configure mappings
-          },
         },
       })
-      vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
+
+      -- Keymaps
+      vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
+      vim.keymap.set("n", "<leader>lg", builtin.live_grep, { desc = "Live Grep" })
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "List all active buffers" })
+      vim.keymap.set("n", "<leader>ch", builtin.command_history, { desc = "Command history" })
     end,
   },
   {
