@@ -1,24 +1,21 @@
 return {
-  "windwp/nvim-autopairs",
-  event = "InsertEnter",
-  dependencies = {
-    "hrsh7th/nvim-cmp",
-  },
+  "echasnovski/mini.pairs",
+  version = "*",
+  opts = {
+    modes = {
+      insert = true,
+      command = false,
+      terminal = false,
+    },
 
-  config = function()
-    require("nvim-autopairs").setup({
-      disable_filetype = {
-      "TelescopePrompt",
-      "vim"
-      },
-      check_ts = true, -- Checks for treesitter
-      ts_config = {
-        lua = { "string" },
-        javascript = { "template_string" },
-      },
-    })
-    local cmp = require("cmp")
-    local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-    cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-  end
+    -- skip autopair when the cursor is inside these treesitter nodes
+    skip_ts = { "string" },
+
+    -- better deal with markdown code blocks
+    markdown = true,
+
+    -- skip autopair when next character is closing pair
+    -- and there are more closing pairs than opening pairs
+    skip_unbalanced = true,
+  },
 }
