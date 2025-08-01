@@ -12,6 +12,7 @@ return {
     local lspconfig = require("lspconfig")
     local mason_lspconfig = require("mason-lspconfig")
     local capabilities = require("blink.cmp").get_lsp_capabilities()
+
     local ensure_installed = {
       "lua_ls",
       "ts_ls",
@@ -33,11 +34,6 @@ return {
       ensure_installed = ensure_installed,
       automatic_installation = true,
     })
-
-    -- Function for attaching blink.cmp capabilities for all LSPs
-    for _, server in ipairs(ensure_installed) do
-      lspconfig[server].setup({ capabilities = capabilities })
-    end
 
     require("mason-tool-installer").setup({
       ensure_installed = {
