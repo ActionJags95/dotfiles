@@ -3,6 +3,7 @@ return {
     "saghen/blink.cmp",
     dependencies = {
       "rafamadriz/friendly-snippets",
+      { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
     },
     version = "1.*",
 
@@ -10,21 +11,12 @@ return {
     --@type blink.cmp.config
 
     opts = {
+      -- Settings snippet engine
+      snippets = { preset = "luasnip" },
+
+      --Keymap options
       keymap = {
-        preset = "none",
-        ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
-        ["<C-e>"] = { "hide", "fallback" },
-        ["<CR>"] = { "accept", "fallback" },
-
-        ["<Up>"] = { "select_prev", "fallback" },
-        ["<Down>"] = { "select_next", "fallback" },
-        ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
-        ["<C-n>"] = { "select_next", "fallback_to_mappings" },
-
-        ["<C-b>"] = { "scroll_documentation_up", "fallback" },
-        ["<C-f>"] = { "scroll_documentation_down", "fallback" },
-
-        ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
+        preset = "default",
       },
 
       appearance = {
@@ -33,11 +25,11 @@ return {
 
       cmdline = {
         keymap = {
-          preset = "none",
+          preset = "default",
         },
         completion = {
-          menu = { auto_show = false },
-          ghost_text = { enabled = false },
+          menu = { auto_show = true },
+          ghost_text = { enabled = true },
         },
       },
 
@@ -47,6 +39,9 @@ return {
         documentation = {
           auto_show = true,
           auto_show_delay_ms = 0,
+          window = {
+            border = "rounded",
+          },
         },
 
         ghost_text = { enabled = false },
@@ -55,11 +50,15 @@ return {
         accept = { auto_brackets = { enabled = false } },
 
         menu = {
+          -- Rounded border
+          border = "rounded",
+
           -- Don't automatically show the completion menu
           auto_show = true,
 
           -- nvim-cmp style completion menu
           draw = {
+
             columns = {
               { "label", "label_description", gap = 1 },
               { "kind_icon", "kind" },
