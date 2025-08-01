@@ -11,3 +11,6 @@ alias gf="git fetch"
 alias gpl="git pull"
 alias gl="git log"
 alias grm="git rm"
+
+# Alias for zoxide
+alias cd="z"
