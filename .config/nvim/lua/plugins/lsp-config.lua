@@ -43,6 +43,7 @@ return {
         "pylint",
         { "eslint_d", version = "13.1.2" },
         "shellcheck",
+        "js-debug-adapter",
       },
     })
 
