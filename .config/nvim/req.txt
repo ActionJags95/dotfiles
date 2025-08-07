@@ -16,3 +16,4 @@
 16. Lualine --done
 17. Floating nvim cmd --done
 18. Indentation guides --done and need deep dive into docs and configs
+19. Debugging -- DAP is setup, need to dive deeper into it and set it up accordingly with keymaps
