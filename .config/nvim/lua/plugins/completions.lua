@@ -12,7 +12,7 @@ return {
 
     opts = {
       -- Settings snippet engine
-      -- snippets = { preset = "luasnip" },
+      snippets = { preset = "luasnip" },
 
       --Keymap options
       keymap = {
