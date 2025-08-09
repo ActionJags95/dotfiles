@@ -1,0 +1,51 @@
+* {
+  font-family: "Adwaita Sans";
+  font-weight: bold;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+}
+
+window#waybar {
+  background-color: rgba(36, 39, 58, 0.6);
+  color: #cad3f5;
+}
+
+#workspaces {
+  background-color: rgba(36, 39, 58, 0.4);
+  margin: 3px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+#workspaces button.active {
+  background-color: rgba(202, 211, 245, 0.5);
+  border-radius: 20px;
+  color: #24273a;
+}
+#workspaces button:hover {
+  border-radius: 20px;
+}
+
+#custom-media,
+#backlight,
+#clock,
+#hardware,
+#window {
+  background-color: rgba(36, 39, 58, 0.4);
+  margin: 3px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#pulseaudio {
+  margin: 0 5px;
+}
+#clock {
+  margin-right: 10px;
+}
