@@ -61,7 +61,7 @@
     "format-icons": {
       "default": ["󰕿 ", "󰖀 ", "󰕾 "],
     },
-    "format-muted": "󰖁 ",
+    "format-muted": " 󰖁 ",
     "on-click": "pavucontrol",
   },
   "battery": {
