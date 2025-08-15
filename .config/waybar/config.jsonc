@@ -45,10 +45,12 @@
   "custom/media": {
     "format": "{icon} {text}",
     "return-type": "json",
-    "format-icons": ["󰓇 "],
+    "format-icons": {
+      "chromium": " ",
+      "spotify": "󰓇 ",
+    },
     "on-click": "playerctl play-pause",
     "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
-    "exec-if": "pgrep spotify",
   },
   "backlight": {
     "device": "amdgpu_bl1",
