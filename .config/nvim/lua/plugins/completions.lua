@@ -28,7 +28,7 @@ return {
           preset = "default",
         },
         completion = {
-          menu = { auto_show = true },
+          menu = { auto_show = false },
           ghost_text = { enabled = true },
         },
       },
@@ -39,9 +39,6 @@ return {
         documentation = {
           auto_show = true,
           auto_show_delay_ms = 0,
-          window = {
-            border = "rounded",
-          },
         },
 
         ghost_text = { enabled = false },
@@ -50,9 +47,6 @@ return {
         accept = { auto_brackets = { enabled = false } },
 
         menu = {
-          -- Rounded border
-          border = "rounded",
-
           -- Don't automatically show the completion menu
           auto_show = true,
 
