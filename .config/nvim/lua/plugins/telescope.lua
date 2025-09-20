@@ -22,7 +22,7 @@ return {
       -- Keymaps
       vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
       vim.keymap.set("n", "<leader>lg", builtin.live_grep, { desc = "Live Grep" })
-      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "List all active buffers" })
+      vim.keymap.set("n", "<leader>bf", builtin.buffers, { desc = "List all active buffers" })
       vim.keymap.set("n", "<leader>ch", builtin.command_history, { desc = "Command history" })
     end,
   },
