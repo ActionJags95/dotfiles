@@ -22,7 +22,7 @@ return {
       },
     })
 
-    vim.keymap.set({ "n", "v" }, "<leader>df", function()
+    vim.keymap.set({ "n", "v" }, "<leader>fd", function()
       require("conform").format({
         lsp_fallback = true,
         async = false,
