@@ -45,18 +45,39 @@ return {
   },
   keys = {
     {
-      "<leader>dO",
+      "<leader>dc",
+      function()
+        require("dap").continue()
+      end,
+      desc = "Dap Continue",
+    },
+    {
+      "<leader>db",
+      function()
+        require("dap").toggle_breakpoint()
+      end,
+      desc = "Toggle Breakpoint",
+    },
+    {
+      "<leader>dsi",
+      function()
+        require("dap").step_into()
+      end,
+      desc = "Debug: Step Into",
+    },
+    {
+      "<leader>dsO",
       function()
         require("dap").step_out()
       end,
-      desc = "Step Out",
+      desc = "Debug: Step Out",
     },
     {
-      "<leader>do",
+      "<leader>dso",
       function()
         require("dap").step_over()
       end,
-      desc = "Step Over",
+      desc = "Debug: Step Over",
     },
     {
       "<leader>da",
@@ -154,5 +175,10 @@ return {
     dap.listeners.before.event_exited["dapui_config"] = function()
       dap_ui.close()
     end
+
+    vim.fn.sign_define(
+      "DapBreakpoint",
+      { text = " ", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
+    )
   end,
 }
