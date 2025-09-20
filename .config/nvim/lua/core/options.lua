@@ -1,3 +1,4 @@
+vim.cmd("let g:netrw_banner = 0")
 local opt = vim.opt
 
 opt.expandtab = true
