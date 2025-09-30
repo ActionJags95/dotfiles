@@ -1,5 +1,7 @@
+@import "colors.css";
+
 * {
-  font-family: "Adwaita Sans";
+  font-family: "CaskaydiaCove Nerd Font";
   font-weight: bold;
   border: none;
   border-radius: 0;
@@ -7,36 +9,63 @@
 }
 
 window#waybar {
-  background-color: rgba(36, 39, 58, 0.6);
+  background-color: rgba(0, 0, 0, 0);
   color: #cad3f5;
 }
 
+tooltip {
+  font-family: "CaskaydiaCove Nerd Font";
+  background-color: #24273a;
+  border: 2px solid #8aadf4;
+  border-radius: 10px;
+}
+
 #workspaces {
-  background-color: rgba(36, 39, 58, 0.4);
+  background-color: #24273a;
   margin: 3px;
   margin-bottom: 5px;
-  border-radius: 20px;
+  border: 2px solid #8aadf4;
+  border-radius: 5px;
   margin-left: 10px;
 }
 #workspaces button.active {
-  background-color: rgba(202, 211, 245, 0.5);
-  border-radius: 20px;
-  color: #24273a;
+  color: #8aadf4;
+  border-radius: 5px;
 }
 #workspaces button:hover {
-  border-radius: 20px;
+  background-color: transparent;
+  color: #363a4f;
 }
 
 #custom-media,
+#custom-menu,
 #backlight,
 #clock,
-#hardware,
 #window {
-  background-color: rgba(36, 39, 58, 0.4);
+  background-color: #24273a;
   margin: 3px;
   margin-bottom: 5px;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 0 20px;
+  border: 2px solid #8aadf4;
+}
+#custom-menu {
+  margin-left: 10px;
+}
+#hardware {
+  background-color: transparent;
+  margin: 3px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+#pulseaudio,
+#network,
+#battery {
+  background-color: #24273a;
+  border: 2px solid #8aadf4;
+  border-radius: 5px;
+  padding: 0 10px;
 }
 
 window#waybar.empty #window {
