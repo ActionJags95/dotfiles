@@ -1,10 +1,11 @@
 {
   "height": 20,
   "spacing": 10,
+  "output": [ "eDP-1" ],
 
   "modules-left": [
+    "custom/menu",
     "hyprland/workspaces",
-    "hyprland/window",
   ],
   "modules-center": [
     "custom/media",
@@ -24,21 +25,37 @@
     ],
   },
 
-
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": [],
-    },
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
   },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "7": "",
+      "8": "",
+      "9": "",
+      "active": "",
+      "urgent": "",
+      "persistent": "",
+      "focused": "",
+      "default": "",
+
+        },
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "*": 9,
+      "DP-1": 9
+    }
+  },
+
   "hyprland/window": {
     "format": "{class}",
   },
