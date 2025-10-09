@@ -1,80 +1,65 @@
-@import "colors.css";
-
 * {
   font-family: "CaskaydiaCove Nerd Font";
   font-weight: bold;
+  font-size: 14px;
   border: none;
   border-radius: 0;
-  font-size: 15px;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   color: #cad3f5;
 }
 
 tooltip {
-  font-family: "CaskaydiaCove Nerd Font";
   background-color: #24273a;
+  font-family: "CaskaydiaCove Nerd Font";
+  border-radius: 5px;
   border: 2px solid #8aadf4;
-  border-radius: 10px;
 }
 
-#workspaces {
+#custom-menu,
+#workspaces,
+#custom-media,
+#backlight,
+#hardware,
+#clock,
+#custom-power {
   background-color: #24273a;
-  margin: 3px;
-  margin-bottom: 5px;
-  border: 2px solid #8aadf4;
+  border: 2.5px solid #8aadf4;
   border-radius: 5px;
-  margin-left: 10px;
+  padding: 0px 10px;
 }
+
+#workspaces,
+#backlight,
+#hardware,
+#clock {
+  margin: 0px 10px;
+}
+
+#network,
+#pulseaudio,
+#battery {
+  padding: 0px 5px;
+}
+
 #workspaces button.active {
   color: #8aadf4;
-  border-radius: 5px;
-}
-#workspaces button:hover {
-  background-color: transparent;
-  color: #363a4f;
 }
 
-#custom-media,
 #custom-menu,
-#backlight,
-#clock,
-#window {
-  background-color: #24273a;
-  margin: 3px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  padding: 0 20px;
-  border: 2px solid #8aadf4;
+#custom-power {
+  margin: 0px 5px;
+  padding: 0px 20px;
 }
-#custom-menu {
-  margin-left: 10px;
-}
-#hardware {
-  background-color: transparent;
-  margin: 3px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  padding: 0 10px;
-}
+
 #pulseaudio,
 #network,
 #battery {
-  background-color: #24273a;
-  border: 2px solid #8aadf4;
-  border-radius: 5px;
-  padding: 0 10px;
+  margin: 0px 2px;
 }
 
-window#waybar.empty #window {
-  background-color: transparent;
-}
-
-#pulseaudio {
-  margin: 0 5px;
-}
 #clock {
-  margin-right: 10px;
+  font-family: "CaskaydiaCove Nerd Font";
 }
