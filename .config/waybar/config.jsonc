@@ -1,6 +1,4 @@
 {
-  "height": 20,
-  "spacing": 10,
   "output": [ "eDP-1" ],
 
   "modules-left": [
@@ -14,6 +12,7 @@
     "backlight",
     "group/hardware",
     "clock",
+    "custom/power",
   ],
 
   "group/hardware": {
@@ -90,7 +89,7 @@
   "clock": {
     "format": "  {:%H:%M}",
     "format-alt": "{:L%A, %B %d, %Y (%R)} 󰃭 ",
-    "tooltip-format": "\n<span size='9pt' font='WenQuanYi Zen Hei Mono'>{calendar}</span>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode"          : "year",
       "mode-mon-col"  : 3,
@@ -111,5 +110,10 @@
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
     },
+    
   },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout --buttons-per-row 6"
+  }
 }
