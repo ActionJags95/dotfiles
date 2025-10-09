@@ -11,5 +11,5 @@ return {
       timeout = 1000,
     })
     notify("Welcome Back!")
-  end
+  end,
 }

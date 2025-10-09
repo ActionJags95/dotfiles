@@ -1,6 +1,11 @@
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
+  lazy = false,
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+  },
   opts = {
     routes = {
       {
@@ -12,13 +17,8 @@ return {
       lsp_doc_border = true,
     },
   },
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
-  },
-  config = function ()
+  config = function()
     require("noice").setup({
-      -- Command line on top and floating
       views = {
         cmdline_popup = {
           position = {
@@ -50,5 +50,5 @@ return {
         },
       },
     })
-  end
+  end,
 }

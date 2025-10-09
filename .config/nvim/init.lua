@@ -1,5 +1,4 @@
 require("core")
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -18,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
+    -- import/override with your plugins
     { import = "plugins" },
   },
   defaults = {
@@ -29,9 +29,10 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
+  install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
     enabled = true, -- check for plugin updates periodically
-    notify = true, -- notify on update
+    notify = false, -- notify on update
   }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -50,5 +51,4 @@ require("lazy").setup({
   },
 })
 
-vim.cmd.colorscheme("catppuccin-macchiato")
-vim.notify = require("notify")
+vim.cmd.colorscheme("catppuccin")

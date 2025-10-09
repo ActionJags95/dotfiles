@@ -11,27 +11,31 @@ return {
     require("mason").setup()
     local lspconfig = require("lspconfig")
     local mason_lspconfig = require("mason-lspconfig")
-    local capabilities = require("blink.cmp").get_lsp_capabilities()
-
-    local ensure_installed = {
-      "lua_ls",
-      "ts_ls",
-      "clangd",
-      "cssls",
-      "cssmodules_ls",
-      "dockerls",
-      "pyright",
-      "tailwindcss",
-      "yamlls",
-      "taplo",
-      "html",
-      "emmet_ls",
-      "bashls",
-      "postgres_lsp",
-    }
+    local capabilites = require("blink.cmp").get_lsp_capabilities()
 
     mason_lspconfig.setup({
-      ensure_installed = ensure_installed,
+      ensure_installed = {
+        "bashls",
+        "clangd",
+        "cmake",
+        "cssls",
+        "dockerls",
+        "docker_compose_language_service",
+        "emmet_ls",
+        "gopls",
+        "html",
+        "jsonls",
+        "ts_ls",
+        "lua_ls",
+        "marksman",
+        "prismals",
+        "pyright",
+        "sqlls",
+        "taplo",
+        "tailwindcss",
+        "vimls",
+        "yamlls",
+      },
       automatic_installation = true,
     })
 
@@ -64,5 +68,5 @@ return {
 
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
     vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
-  end,
+  end
 }

@@ -1,19 +1,19 @@
-1. Colors --done
-2. Auto pairing braces --done
-3. Code suggesstions and completions --used blink.cmp, need to deepdive the docs and customize to requirements
-4. Syntax highlighting --done, (treesitter-text-objects added and need to be configured)
-5. Git integration and highlighting --Need to go through gitsigns docs, and configure gitsigns, LazyGit needs to be added and configured
-6. Terminal integration --done, need config
-7. Filetree and file-explorer --done and need some more keymaps
-8. Find and replace
-9. Commenting --done but need to dive deeper and need to work on triggering comment on empty line
-10. Code folding
-11. LSP, formatters and linters --setup done, need to deepdive the documentation and do more customization
-12. Buffer management --done but need go through docs, configs and keymaps
-13. Greet page --Used default from Snacks.nvim
-14. Notifications --done but need configuration
-15. Todo comments --done
-16. Lualine --done
-17. Floating nvim cmd --done
-18. Indentation guides --done and need deep dive into docs and configs
-19. Debugging -- DAP is setup, need to dive deeper into it and set it up accordingly with keymaps
+1. Indentation support and highlights --done
+2. LSP and autocompletions --done and need some deepdive on blink.cmp and its config
+3. Syntax highlighting --done with treesitter
+4. Debugging --done, borrowed old config, need extensive research on this
+5. Git status --done and need to learn lazygit
+6. Formatting and linting --done, borrowed old config, since it does most of the job
+7. File tree --done
+8. Bufferline and management --done and added keymaps
+9. Auto pairing --done but need reading docs on mini.pairs and choosing between mini.paird and nvim-autopairs
+10. Code commenting and todo comments --done and need some extensive config
+11. Error highlighting
+12. Lua line --done
+13. Telescope --done
+14. Messages and Notifications --need to dive deeper for better messages
+15. ColorScheme --done
+16. Terminal Integration --done
+17. Floating nvim cmd --done with noice
+
+Need to setup neovim options as well

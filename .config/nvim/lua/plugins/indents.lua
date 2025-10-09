@@ -1,8 +1,8 @@
 return {
   {
-    -- Indent blankline
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
+    lazy = false,
 
     opts = {
       indent = {
@@ -16,9 +16,9 @@ return {
   },
 
   {
-    -- Mini.indentscope
     "echasnovski/mini.indentscope",
     version = false,
+    lazy = false,
     opts = {
       symbol = "│",
       options = { try_as_border = true },

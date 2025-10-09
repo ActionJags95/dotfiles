@@ -1,6 +1,7 @@
 return {
   "akinsho/toggleterm.nvim",
   version = "*",
+  lazy = false,
   opts = {
     vim.keymap.set(
       "n",
@@ -11,7 +12,7 @@ return {
     vim.keymap.set(
       "n",
       "<leader>tv",
-      ":ToggleTerm direction=vertical<CR>",
+      ":ToggleTerm direction=vertical size=90<CR>",
       { noremap = true, silent = true, desc = "Toggle vertical terminal" }
     ),
     vim.keymap.set(

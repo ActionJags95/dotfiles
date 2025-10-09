@@ -1,73 +1,69 @@
 return {
-  {
-    "saghen/blink.cmp",
-    dependencies = {
-      "rafamadriz/friendly-snippets",
-      { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
+  "saghen/blink.cmp",
+  dependencies = { "rafamadriz/friendly-snippets" },
+
+  -- use a release tag to download pre-built binaries
+  version = "1.*",
+  build = "cargo build --release",
+
+  opts = {
+    appearance = {
+      use_nvim_cmp_as_default = false,
+
+      -- Font variant
+      nerd_font_variant = "normal",
     },
-    version = "1.*",
 
-    --@module 'blink.cmp'
-    --@type blink.cmp.config
-
-    opts = {
-      -- Settings snippet engine
-      snippets = { preset = "luasnip" },
-
-      --Keymap options
-      keymap = {
-        preset = "default",
-      },
-
-      appearance = {
-        nerd_font_variant = "normal",
-      },
-
-      cmdline = {
-        keymap = {
-          preset = "default",
-        },
-        completion = {
-          menu = { auto_show = false },
-          ghost_text = { enabled = true },
+    completion = {
+      menu = {
+        draw = {
+          treesitter = { "lsp" },
         },
       },
+      documentation = {
+        -- Automatically show documentation menu
+        auto_show = true,
 
+        -- Immediately show docs menu
+        auto_show_delay_ms = 0,
+      },
+      accept = {
+        auto_brackets = {
+          enabled = true,
+        },
+      },
+      ghost_text = {
+        enabled = vim.g.ai_cmp,
+      },
+    },
+
+    cmdline = {
+      enabled = true,
       completion = {
-        keyword = { range = "full" },
-
-        documentation = {
-          auto_show = true,
-          auto_show_delay_ms = 0,
-        },
-
-        ghost_text = { enabled = false },
-
-        -- Disable auto brackets
-        accept = { auto_brackets = { enabled = false } },
-
-        menu = {
-          -- Don't automatically show the completion menu
-          auto_show = true,
-
-          -- nvim-cmp style completion menu
-          draw = {
-
-            columns = {
-              { "label", "label_description", gap = 1 },
-              { "kind_icon", "kind" },
-            },
-          },
-        },
+        ghost_text = { enabled = true },
       },
-
-      sources = {
-        default = { "lsp", "path", "snippets", "buffer" },
-      },
-
-      fuzzy = { implementation = "prefer_rust_with_warning" },
+      keymap = { preset = "inherit" },
     },
 
-    opts_extended = { "sources.default" },
+    sources = {
+      default = { "lsp", "path", "snippets", "buffer" },
+    },
+
+    -- Enabling function signature
+    signature = {
+      enabled = true,
+      window = {
+        show_documentation = true,
+        treesitter_highlighting = true,
+      },
+    },
+
+    fuzzy = {
+      implementation = "prefer_rust",
+    },
+
+    keymap = {
+      preset = "default",
+    },
   },
 }

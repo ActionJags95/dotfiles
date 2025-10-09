@@ -3,31 +3,23 @@ return {
   branch = "v3.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
-    -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
+    "nvim-tree/nvim-web-devicons",
   },
-  lazy = false, -- neo-tree will lazily load itself
-  ---@module "neo-tree"
-  ---@type neotree.Config?
-  opts = {
-    window = {
-      width = 30,
-    },
-    keymaps = {
-      vim.keymap.set(
-        "n",
-        "<leader>e",
-        ":Neotree toggle<CR>",
-        { noremap = true, silent = true, desc = "Toggle NeoTree" }
-      ),
-    },
-    filesystem = {
-      filtered_items = {
-        visible = true,
-        hide_dotfiles = false,
-        hide_gitignored = false,
+  lazy = false,
+  config = function()
+    require("neo-tree").setup({
+      window = {
+        width = 30,
       },
-    },
-  },
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = false,
+        },
+      },
+    })
+    vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { silent = true, noremap = true, desc = "Toggle Neotree" })
+  end,
 }

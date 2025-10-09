@@ -2,10 +2,11 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
+    lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
-      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make", lazy = false },
     },
 
     config = function()
@@ -26,8 +27,10 @@ return {
       vim.keymap.set("n", "<leader>ch", builtin.command_history, { desc = "Command history" })
     end,
   },
+
   {
     "nvim-telescope/telescope-ui-select.nvim",
+    lazy = false,
     config = function()
       require("telescope").setup({
         extensions = {
