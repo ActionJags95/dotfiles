@@ -1,14 +1,15 @@
 * {
   font-family: "CaskaydiaCove Nerd Font";
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
   border: none;
   border-radius: 0;
 }
 
 window#waybar {
-  background-color: transparent;
+  background-color: #24273a;
   color: #cad3f5;
+  border-bottom: 2px solid #8aadf4;
 }
 
 tooltip {
@@ -24,8 +25,6 @@ tooltip {
 #hardware,
 #clock,
 #custom-power {
-  background-color: #24273a;
-  border: 2.5px solid #8aadf4;
   padding: 0px 10px;
 }
 
@@ -45,11 +44,14 @@ tooltip {
 #workspaces button.active {
   color: #8aadf4;
 }
+#workspaces button.empty {
+  opacity: 0.5;
+}
 
 #custom-menu,
 #custom-power {
   margin: 0px 5px;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 #pulseaudio,
@@ -61,3 +63,29 @@ tooltip {
 #clock {
   font-family: "CaskaydiaCove Nerd Font";
 }
+
+#custom-menu {
+  color: #8aadf4;
+}
+#custom-media {
+  color: #c6a0f6;
+}
+#backlight {
+  color: #eed49f;
+}
+#network {
+  color: #91d7e3;
+}
+#pulseaudio {
+  color: #c6a0f6;
+}
+#battery {
+  color: #a6da95;
+}
+#clock {
+  color: #f5a97f;
+}
+#custom-power {
+  color: #ed8796;
+}
+
