@@ -14,7 +14,6 @@ window#waybar {
 tooltip {
   background-color: #24273a;
   font-family: "CaskaydiaCove Nerd Font";
-  border-radius: 5px;
   border: 2px solid #8aadf4;
 }
 
@@ -27,7 +26,6 @@ tooltip {
 #custom-power {
   background-color: #24273a;
   border: 2.5px solid #8aadf4;
-  border-radius: 5px;
   padding: 0px 10px;
 }
 
