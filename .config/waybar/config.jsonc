@@ -1,6 +1,7 @@
 {
-  "output": [ "eDP-1" ],
-
+  // "output": [ "eDP-1" ],
+  // "height": 35,
+  "margin": 6,
   "modules-left": [
     "custom/menu",
     "hyprland/workspaces"
@@ -14,7 +15,6 @@
     "clock",
     "custom/power"
   ],
-
   "group/hardware": {
     "orientation": "horizontal",
     "modules": [
@@ -23,7 +23,6 @@
       "battery"
     ]
   },
-
   "custom/menu": {
     "format": "󰣇",
     "on-click": "rofi -show drun"
@@ -42,37 +41,53 @@
       "7": "7",
       "8": "8",
       "9": "9",
-      "10": "10",
-      "active": "󱓻"
-      },
+      "10": "10"
+    },
     "sort-by-number": true,
     "persistent-workspaces": {
-      "*": 10,
-      "DP-1": 10
+      "*": [
+        1,
+        2
+      ]
     }
   },
-
   "custom/media": {
     "format": "{icon} {text}",
     "return-type": "json",
     "format-icons": {
       "chromium": " ",
-      "spotify": "󰓇 ",
+      "spotify": "󰓇 "
     },
     "on-click": "playerctl play-pause",
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
   },
   "backlight": {
     "device": "amdgpu_bl1",
     "format": "{icon} {percent}%",
-    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " "],
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
   },
   "network": {
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰀂",
-    "format-disconnected": "󰤮",
+    "format-icons": [
+      "󰤯 ",
+      "󰤟 ",
+      "󰤢 ",
+      "󰤥 ",
+      "󰤨 "
+    ],
+    "format": " {icon}",
+    "format-wifi": " {icon}",
+    "format-ethernet": " 󰀂 ",
+    "format-disconnected": "󰤮 ",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
@@ -80,47 +95,79 @@
   },
   "pulseaudio": {
     "format": " {icon}",
-    "format-bluetooth": "󰂯{icon}",
+    "format-bluetooth": " 󰂱 ",
     "format-icons": {
-      "default": ["󰕿 ", "󰖀 ", "󰕾 "],
+      "headphone": "󰋋",
+      "default": [
+        "󰕿 ",
+        "󰖀 ",
+        "󰕾 "
+      ]
     },
     "format-muted": " 󰖁 ",
-    "on-click": "pavucontrol",
+    "on-click": "pavucontrol"
   },
   "battery": {
-    "interaval": 120,
+    "interval": 1,
     "states": {
       "warning": 30,
-      "critical": 15,
+      "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "{icon} {capacity}%",
+    "format-discharging": "{icon} {capacity}%",
+    "format-icons": {
+      "default": [
+        "󰂃",
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ],
+      "charging": [
+        "󰢜 ",
+        "󰂆 ",
+        "󰂇 ",
+        "󰂈 ",
+        "󰢝 ",
+        "󰂉 ",
+        "󰢞 ",
+        "󰂊 ",
+        "󰂋 ",
+        "󰂅 "
+      ]
+    }
   },
   "clock": {
-    "format": "  {:%H:%M}",
+    "format": "  {:%a, %b %d %H:%M}",
     "format-alt": "{:L%A, %B %d, %Y (%R)} 󰃭 ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
-      "mode"          : "year",
-      "mode-mon-col"  : 3,
-      "weeks-pos"     : "right",
-      "on-scroll"     : 1,
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
       "format": {
-        "months":     "<span color='#ffead3'><b>{}</b></span>",
-        "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-        "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
       }
     },
-    "actions":  {
+    "actions": {
       "on-click-right": "mode",
       "on-click-forward": "tz_up",
       "on-click-backward": "tz_down",
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
-    },
-    
+    }
   },
   "custom/power": {
     "format": "⏻",
