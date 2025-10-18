@@ -17,3 +17,9 @@
 17. Floating nvim cmd --done with noice
 
 Need to setup neovim options as well
+blur is now managed temporarily managed using bg.nvim. for permanent fix, bufferline.nvim, lualine.nvim, blink.cmp, nvim-notify and Floating cmdline need to configured for desired look and text-highlights as well
+Also swaync and sddm needs to be configured
+git blame color also need to be set for better visibility
+
+
+workspaces section of waybar need to be themed
