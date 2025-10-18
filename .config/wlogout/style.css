@@ -1,22 +1,32 @@
 * {
-  background-image: none;
   box-shadow: none;
 }
 
 window {
-  background-color: rgba(12, 12, 12, 0.9);
+  /* background-color: rgba(36, 39, 58, 0.7); */
+  background-image: url("./wallpaper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 button {
+  background-origin: border-box;
+  margin: 150px 10px;
   border-radius: 10px;
-  border: 2px solid #8aadf4;
-  color: #ffffff;
-  background-color: #24273a;
+  color: #c6a0f6;
+  background-color: rgba(36, 39, 58, 0.4);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25%;
   min-width: 120px;
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: "SF Pro Display";
+  font-weight: bold;
+  font-size: 20px;
+  min-height: 120px;
+  transition:
+    background-size 0.1s linear,
+    margin 0.1s linear,
+    font-size 0.1s linear;
 }
 
 button:active {
@@ -24,15 +34,22 @@ button:active {
   outline-style: none;
 }
 
-button:hover {
-  background-color: #8aadf4;
+button:hover,
+button:focus {
+  background-color: #c6a0f6;
+  background-size: 35%;
   color: #24273a;
+  margin: 130px 0px;
+  font-size: 22px;
 }
 
 #lock {
   background-image: image(url("./icons/normal/lock.svg"));
 }
 #lock:hover {
+  background-image: image(url("icons/focussed/lock.svg"));
+}
+#lock:focus {
   background-image: image(url("icons/focussed/lock.svg"));
 }
 
@@ -42,11 +59,17 @@ button:hover {
 #logout:hover {
   background-image: image(url("icons/focussed/logout.svg"));
 }
+#logout:focus {
+  background-image: image(url("icons/focussed/logout.svg"));
+}
 
 #suspend {
   background-image: image(url("icons/normal/suspend.svg"));
 }
 #suspend:hover {
+  background-image: image(url("icons/focussed/suspend.svg"));
+}
+#suspend:focus {
   background-image: image(url("icons/focussed/suspend.svg"));
 }
 
@@ -56,6 +79,9 @@ button:hover {
 #hibernate:hover {
   background-image: image(url("icons/focussed/hibernate.svg"));
 }
+#hibernate:focus {
+  background-image: image(url("icons/focussed/hibernate.svg"));
+}
 
 #shutdown {
   background-image: image(url("icons/normal/shutdown.svg"));
@@ -63,10 +89,16 @@ button:hover {
 #shutdown:hover {
   background-image: image(url("icons/focussed/shutdown.svg"));
 }
+#shutdown:focus {
+  background-image: image(url("icons/focussed/shutdown.svg"));
+}
 
 #reboot {
   background-image: image(url("icons/normal/reboot.svg"));
 }
 #reboot:hover {
+  background-image: image(url("icons/focussed/reboot.svg"));
+}
+#reboot:focus {
   background-image: image(url("icons/focussed/reboot.svg"));
 }
