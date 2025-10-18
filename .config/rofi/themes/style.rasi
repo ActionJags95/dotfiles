@@ -12,7 +12,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "CaskaydiaCove Nerd Font 10";
+    font:                        "SF Pro Display Semibold 12";
     background:                  #24273a;
     background-alt:              #313244;
     foreground:                  #eff1f5;
@@ -35,7 +35,7 @@ window {
     enabled:                     true;
     border:                      1px;
     border-color:                @selected;
-    border-radius:               5px;
+    border-radius:               15px;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -47,6 +47,7 @@ mainbox {
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "inputbar", "listbox" ];
+    border-radius:               30px;
 }
 
 listbox {
