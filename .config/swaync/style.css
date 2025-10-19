@@ -1,7 +1,8 @@
 * {
   all: unset;
   font-size: 14px;
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: "SF Pro Display";
+  font-weight: bold;
   transition: 200ms;
 }
 
@@ -52,7 +53,7 @@ trough {
 
 .notification-background .notification {
   padding: 7px;
-  border-radius: 12.6px;
+  border-radius: 10px;
 }
 
 .notification-background .notification.critical {
@@ -142,14 +143,14 @@ trough {
   box-shadow:
     0 0 8px 0 rgba(0, 0, 0, 0.8),
     inset 0 0 0 1px #363a4f;
-  border-radius: 12.6px;
+  border-radius: 15px;
   background-color: #24273a;
   color: #cad3f5;
   padding: 14px;
 }
 
 .control-center .notification-background {
-  border-radius: 7px;
+  border-radius: 15px;
   box-shadow: inset 0 0 0 1px #494d64;
   margin: 4px 10px;
 }
@@ -202,7 +203,8 @@ scrollbar trough {
 
 /* dnd */
 .widget-dnd {
-  margin-top: 5px;
+  margin: 10px 5px;
+  margin-bottom: 20px;
   border-radius: 8px;
   font-size: 1.1rem;
 }
@@ -253,7 +255,7 @@ scrollbar trough {
 }
 
 .widget-mpris button {
-  border-radius: 12.6px;
+  border-radius: 15px;
   color: #cad3f5;
   margin: 0 5px;
   padding: 2px;
@@ -308,12 +310,12 @@ scrollbar trough {
 }
 
 .widget-volume label {
-  color: #7dc4e4;
+  color: #8aadf4;
   padding: 0 1rem;
 }
 
 .widget-volume trough highlight {
-  background: #7dc4e4;
+  background: #8aadf4;
 }
 
 .widget-backlight trough highlight {
