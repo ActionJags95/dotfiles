@@ -19,6 +19,7 @@
     "orientation": "horizontal",
     "modules": [
       "network",
+      "bluetooth",
       "pulseaudio",
       "battery"
     ]
@@ -93,9 +94,19 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3
   },
+  "bluetooth": {
+    "format": " {status}",
+    // "tooltip-format": "{controller_alias}",
+    "format-on": " on",
+    "format-off": "󰂲 off",
+    "format-disabled": "󰂲 off",
+    "format-connected": "󰂱",
+    "format-connected-battery": "󰂱 {device_battery_percentage}%",
+    "tooltip-format-connected": "󰂱 {device_alias}",
+    "on-click": "blueman-manager"
+  },
   "pulseaudio": {
     "format": " {icon}",
-    "format-bluetooth": " 󰂱 ",
     "format-icons": {
       "headphone": "󰋋",
       "default": [
