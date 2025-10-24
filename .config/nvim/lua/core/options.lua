@@ -14,3 +14,5 @@ opt.autoindent = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.termguicolors = true
+
+opt.fillchars:append({ eob = " " })
