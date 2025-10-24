@@ -19,6 +19,9 @@ return {
         draw = {
           treesitter = { "lsp" },
         },
+
+        -- Border for completion menu
+        border = "single",
       },
       documentation = {
         -- Automatically show documentation menu
@@ -26,6 +29,9 @@ return {
 
         -- Immediately show docs menu
         auto_show_delay_ms = 0,
+
+        -- Border for docs
+        window = { border = "single" },
       },
       accept = {
         auto_brackets = {
