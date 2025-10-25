@@ -22,7 +22,6 @@ tooltip {
 }
 
 #custom-menu,
-#custom-media,
 #backlight,
 #network,
 #bluetooth,
@@ -60,19 +59,12 @@ tooltip {
   padding: 0px 10px;
   border-radius: 20px;
 }
-#workspaces button.empty {
-  /* display: none; */
-}
 
 #workspaces,
 #backlight,
 #hardware,
 #clock {
   margin: 0px 10px;
-}
-
-#custom-media {
-  margin-left: 10px;
 }
 
 #network,
@@ -97,9 +89,6 @@ tooltip {
 
 #custom-menu {
   color: #8aadf4;
-}
-#custom-media {
-  color: #c6a0f6;
 }
 #backlight {
   color: #eed49f;
