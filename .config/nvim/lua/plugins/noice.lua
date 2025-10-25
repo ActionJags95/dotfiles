@@ -49,6 +49,14 @@ return {
           },
         },
       },
+      lsp = {
+        signature = {
+          enabled = false,
+        },
+        hover = {
+          enabled = false,
+        },
+      },
     })
   end,
 }
