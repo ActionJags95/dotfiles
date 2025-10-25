@@ -57,7 +57,7 @@ tooltip {
   color: #24273a;
   margin: 10px 5px;
   min-height: 1px;
-  padding: 0px 20px;
+  padding: 0px 10px;
   border-radius: 20px;
 }
 #workspaces button.empty {
