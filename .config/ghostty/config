@@ -1,0 +1,13 @@
+# Font Configuration
+font-size = 13
+
+font-family = CaskaydiaCove Nerd Font
+font-style = Regular
+font-style-bold = Bold
+font-style-italic = Italic
+font-style-bold-italic = Bold Italic
+
+# Ghostty theme
+theme = Catppuccin Macchiato
+
+background-opacity = 0.6
