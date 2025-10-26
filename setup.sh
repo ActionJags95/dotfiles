@@ -21,7 +21,7 @@ function check_program() {
   fi
 }
 check_program stow
-stow --target=/home/"$USER" "$DOTFILES_DIR"
+stow --target=/home/"$USER" .
 
 
 cd "$HOME_DIR"
