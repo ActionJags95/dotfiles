@@ -39,3 +39,6 @@ bat cache --build
 clear
 echo "*Loading .zshrc*"
 source "$HOME_DIR/.zshrc"
+
+# Loading font-config
+fc-cache -fv
