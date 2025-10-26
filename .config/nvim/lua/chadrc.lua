@@ -2,6 +2,7 @@ local M = {}
 
 M.base46 = {
   theme = "catppuccin",
+  transparency = true,
   changed_themes = {
     catppuccin = {
       base_30 = {
@@ -10,6 +11,7 @@ M.base46 = {
         darker_black = "#1e2030",
         white = "#cad3f5",
         grey = "#494d64",
+        grey_fg = "#939ab7",
         line = "#6e738d",
         red = "#ed8796",
         pink = "#f5bde6",
@@ -31,23 +33,44 @@ M.base46 = {
       },
       base_16 = {
         base00 = "#24273a",
-        base02 = "#363a4f",
-        base03 = "#494d64",
+        base02 = "#1e2030",
+        base03 = "#6e738d",
         base0B = "#a6da95",
       },
     },
   },
   hl_override = {
-    -- Telescope theming
+    -- Text Area Theming
+    Folded = { bg = "#1e2030" },
+    NormalFloat = { bg = "#1e2030" },
+
+    -- Telescope Theming
     TelescopeNormal = { bg = "#181926" },
     TelescopeBorder = { fg = "#181926", bg = "#181926" },
     TelescopeResultsTitle = { fg = "#181926", bg = "#181926" },
+    TelescopePromptNormal = { bg = "#24273a" },
+    TelescopePromptPrefix = { bg = "#24273a" },
+    TelescopePromptBorder = { fg = "#24273a", bg = "#24273a" },
 
-    -- Blink.cmp theming
+    -- Blink.cmp Theming
     BlinkCmpMenu = { bg = "#1e2030" },
     BlinkCmpMenuBorder = { fg = "#8aadf4", bg = "#1e2030" },
     BlinkCmpDoc = { bg = "#1e2030" },
     BlinkCmpDocBorder = { fg = "#8aadf4", bg = "#1e2030" },
+
+    -- Status line Theming
+    StatusLine = { bg = "#1e2030" },
+    St_gitIcons = { fg = "#eed49f" },
+
+    -- Bufferline Theming
+    Tabline = { bg = "#1e2030" },
+    TbBufOn = { bg = "#363a4f" },
+    TbBufOnClose = { bg = "#363a4f" },
+    TbBufOnModified = { bg = "#363a4f" },
+
+    -- NvimTree Theming
+    NvimTreeNormal = { bg = "#1e2030" },
+    NvimTreeNormalNC = { bg = "#1e2030" },
   },
 }
 
