@@ -9,6 +9,7 @@ return {
     notify.setup({
       stages = "fade_in_slide_out",
       timeout = 1000,
+      background_colour = "#000000",
     })
     notify("Welcome Back!")
   end,
