@@ -35,3 +35,7 @@ check_program swaync
 swaync-client -rs
 swaync-client -R
 
+# Loading the .zshrc file to install all the necessary plugins
+clear
+echo "*Loading .zshrc*"
+source "$HOME_DIR/.zshrc"
