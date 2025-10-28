@@ -10,4 +10,4 @@ font-style-bold-italic = Bold Italic
 # Ghostty theme
 theme = Catppuccin Macchiato
 
-background-opacity = 0.6
+background-opacity = 0.65
