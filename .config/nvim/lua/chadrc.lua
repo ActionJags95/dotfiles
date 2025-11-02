@@ -48,9 +48,9 @@ M.base46 = {
     TelescopeNormal = { bg = "#181926" },
     TelescopeBorder = { fg = "#181926", bg = "#181926" },
     TelescopeResultsTitle = { fg = "#181926", bg = "#181926" },
-    TelescopePromptNormal = { bg = "#24273a" },
-    TelescopePromptPrefix = { bg = "#24273a" },
-    TelescopePromptBorder = { fg = "#24273a", bg = "#24273a" },
+    TelescopePromptNormal = { bg = "#1e2030" },
+    TelescopePromptPrefix = { bg = "#1e2030" },
+    TelescopePromptBorder = { fg = "#1e2030", bg = "#1e2030" },
 
     -- Blink.cmp Theming
     BlinkCmpMenu = { bg = "#1e2030" },
@@ -61,12 +61,6 @@ M.base46 = {
     -- Status line Theming
     StatusLine = { bg = "#1e2030" },
     St_gitIcons = { fg = "#eed49f" },
-
-    -- Bufferline Theming
-    Tabline = { bg = "#1e2030" },
-    TbBufOn = { bg = "#363a4f" },
-    TbBufOnClose = { bg = "#363a4f" },
-    TbBufOnModified = { bg = "#363a4f" },
   },
 }
 
