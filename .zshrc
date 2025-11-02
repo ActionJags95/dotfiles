@@ -26,17 +26,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
 source $OMZ/oh-my-zsh.sh
 
-
-# check for catppuccin.tmux
-if [ ! -d /home/$USER/.config/tmux/plugins/catppuccin/tmux ]; then
-  mkdir -p ~/.config/tmux/plugins/catppuccin
-  git clone https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
-fi
-
-# Activating os-based .rc file
-OS_NAME="$(awk -F= '/^ID=/{print $2}' /etc/os-release | tr -d '"' | tr '[:upper:]' '[:lower:]')"
-source ~/.zshrc.$OS_NAME
-
 # Activating Virtual environment if exists
 if [ -d $PWD/.venv ]; then
   source .venv/bin/activate
@@ -54,4 +43,3 @@ source ~/.zshrc.aliases
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-stty -ixon
