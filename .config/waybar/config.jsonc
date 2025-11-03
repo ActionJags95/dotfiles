@@ -1,5 +1,7 @@
 {
-  // "output": [ "eDP-1" ],
+  "output": [
+    "eDP-1"
+  ],
   // "height": 35,
   "margin": 6,
   "modules-left": [
