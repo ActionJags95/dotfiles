@@ -1,4 +1,3 @@
-
 export OMZ="$HOME/.oh-my-zsh"
 
 # Checking for presence of oh-my-zsh
@@ -21,7 +20,6 @@ if [ ! -d $OMZ/custom/plugins/zsh-completions ]; then
   git clone https://github.com/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-$OMZ/custom}/plugins/zsh-completions
 fi
 
-
 ZSH_THEME="robbyrussell"
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
 source $OMZ/oh-my-zsh.sh
@@ -31,8 +29,6 @@ if [ -d $PWD/.venv ]; then
   source .venv/bin/activate
 fi
 
-
-export PATH=$PATH:/home/jags/.spicetify
 export EDITOR=nvim
 source ~/.zshrc.aliases
 
@@ -43,3 +39,12 @@ source ~/.zshrc.aliases
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+source /usr/share/nvm/init-nvm.sh
+eval "$(zoxide init zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/jags.toml)"
+alias py="python3"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
