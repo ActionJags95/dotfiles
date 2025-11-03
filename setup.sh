@@ -1,6 +1,8 @@
 #!/usr/bin/zsh
 clear
 
+HOME_DIR="$HOME"
+
 echo "
 ██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗
 ██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝██║██║     ██╔════╝██╔════╝
@@ -30,11 +32,6 @@ cd "$HOME_DIR"
 # Bat theming
 check_program bat
 bat cache --build
-
-# Swaync theming
-# check_program swaync
-# swaync-client -rs
-# swaync-client -R
 
 # Loading the .zshrc file to install all the necessary plugins
 clear
