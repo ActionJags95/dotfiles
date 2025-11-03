@@ -40,3 +40,5 @@ source "$HOME_DIR/.zshrc"
 
 # Loading font-config
 fc-cache -fv
+
+clear
