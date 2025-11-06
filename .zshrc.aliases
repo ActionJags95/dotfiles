@@ -14,3 +14,6 @@ alias grm="git rm"
 
 # Alias for zoxide
 alias cd="z"
+
+# eza aliases
+alias ls="eza --oneline --icons --group-directories-first"
