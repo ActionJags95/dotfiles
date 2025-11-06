@@ -48,6 +48,8 @@ return {
         { "eslint_d", version = "13.1.2" },
         "shellcheck",
         "js-debug-adapter",
+        "gofumpt",
+        "nixfmt",
       },
     })
 
@@ -68,5 +70,5 @@ return {
 
     vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
     vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
-  end
+  end,
 }

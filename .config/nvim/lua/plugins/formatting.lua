@@ -14,6 +14,8 @@ return {
         markdown = { "prettier" },
         lua = { "stylua" },
         python = { { "isort", "black" } },
+        nix = { "nixfmt" },
+        go = { "gofumpt" },
       },
       format_on_save = {
         lsp_fallback = true,
