@@ -55,15 +55,6 @@ return {
       default = { "lsp", "path", "snippets", "buffer" },
     },
 
-    -- Enabling function signature
-    signature = {
-      enabled = true,
-      window = {
-        show_documentation = true,
-        treesitter_highlighting = true,
-      },
-    },
-
     fuzzy = {
       implementation = "prefer_rust",
     },
