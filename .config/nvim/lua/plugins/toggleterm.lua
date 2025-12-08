@@ -22,4 +22,31 @@ return {
       { noremap = true, silent = true, desc = "Toggle float terminal" }
     ),
   },
+  config = function()
+    local Terminal = require("toggleterm.terminal").Terminal
+    local lazygit = Terminal:new({
+      cmd = "lazygit",
+      display_name = "LazyGit",
+      hidden = true,
+      direction = "float",
+      float_opts = {
+        border = "curved",
+        title_pos = "center",
+      },
+    })
+
+    function _lazygit_toggle()
+      lazygit:toggle()
+    end
+
+    vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+
+    require("toggleterm").setup({
+      -- shading_factor = -100,
+      float_opts = {
+        border = "curved",
+        title_pos = "center",
+      },
+    })
+  end,
 }
