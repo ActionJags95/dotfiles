@@ -21,7 +21,7 @@ return {
         },
 
         -- Border for completion menu
-        border = "single",
+        border = "rounded",
       },
       documentation = {
         -- Automatically show documentation menu
@@ -31,7 +31,7 @@ return {
         auto_show_delay_ms = 0,
 
         -- Border for docs
-        window = { border = "single" },
+        window = { border = "rounded" },
       },
       accept = {
         auto_brackets = {
