@@ -17,3 +17,4 @@ opt.smartcase = true
 opt.termguicolors = true
 
 opt.fillchars:append({ eob = " " })
+opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
