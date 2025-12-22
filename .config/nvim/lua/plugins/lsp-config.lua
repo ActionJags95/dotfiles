@@ -13,6 +13,8 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
     local capabilites = require("blink.cmp").get_lsp_capabilities()
 
+    vim.filetype.add({ extension = { ejs = "ejs" } })
+
     mason_lspconfig.setup({
       ensure_installed = {
         "bashls",
@@ -29,7 +31,7 @@ return {
         "lua_ls",
         "marksman",
         "prismals",
-        "pyright",
+        "pylsp",
         "sqlls",
         "taplo",
         "tailwindcss",
@@ -43,6 +45,7 @@ return {
       ensure_installed = {
         "prettier",
         "stylua",
+        "black",
         "isort",
         "pylint",
         { "eslint_d", version = "13.1.2" },
