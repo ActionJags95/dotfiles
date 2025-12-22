@@ -28,7 +28,8 @@ tooltip {
 #pulseaudio,
 #battery,
 #clock,
-#custom-power {
+#custom-power,
+#custom-notification {
   font-size: 15px;
   background-color: #24273a;
   padding: 7px 15px;
@@ -110,4 +111,9 @@ tooltip {
 }
 #custom-power {
   color: #ed8796;
+}
+
+#custom-notification {
+  color: #8aadf4;
+  padding: 0px 15px;
 }
