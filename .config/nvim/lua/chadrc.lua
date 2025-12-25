@@ -44,8 +44,8 @@ M.base46 = {
     NvDashButtons = { fg = "#f5a97f" },
 
     -- Text Area Theming
-    Folded = { bg = "#1e2030" },
-    NormalFloat = { bg = "#1e2030" },
+    Folded = { bg = "#24273a" },
+    NormalFloat = { bg = "#24273a" },
 
     -- Telescope Theming
     TelescopeNormal = { bg = "#181926" },
