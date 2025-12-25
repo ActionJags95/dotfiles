@@ -40,6 +40,9 @@ M.base46 = {
     },
   },
   hl_override = {
+    -- Defaults
+    NvDashButtons = { fg = "#f5a97f" },
+
     -- Text Area Theming
     Folded = { bg = "#1e2030" },
     NormalFloat = { bg = "#1e2030" },
@@ -68,6 +71,46 @@ M.ui = {
   statusline = {
     theme = "default",
     seperator_style = "round",
+  },
+}
+M.nvdash = {
+  load_on_startup = true,
+  header = {
+    "╔══════════════════════════════════════════════════════╗",
+    "║                                                      ║",
+    "║  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗  ║",
+    "║  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║  ║",
+    "║  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║  ║",
+    "║  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║  ║",
+    "║  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║  ║",
+    "║  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝  ║",
+    "║                                                      ║",
+    "╚══════════════════════════════════════════════════════╝",
+    "                                                        ",
+    "                                                        ",
+  },
+  buttons = {
+    { txt = "  Find File", keys = "ff", cmd = "Telescope find_files" },
+    { txt = "  Recent Files", keys = "fo", cmd = "Telescope oldfiles" },
+    { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
+    { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
+    { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
+    { txt = "  Restore Session", keys = "rs", cmd = "AutoSession restore" },
+    -- more... check nvconfig.lua file for full list of buttons
+    { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
+
+    {
+      txt = function()
+        local stats = require("lazy").stats()
+        local ms = math.floor(stats.startuptime) .. " ms"
+        return "  Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms
+      end,
+      hl = "NvDashFooter",
+      no_gap = true,
+      content = "fit",
+    },
+
+    { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
   },
 }
 return M
