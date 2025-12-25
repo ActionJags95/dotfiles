@@ -64,6 +64,11 @@ M.base46 = {
     -- Status line Theming
     StatusLine = { bg = "#1e2030" },
     St_gitIcons = { fg = "#eed49f" },
+
+    -- Bufferline theming
+    TbFill = { bg = "#1e2030" },
+    TbBufOff = { bg = "#1e2030", fg = "#5b6078" },
+    TbBufOffClose = { bg = "#1e2030", fg = "#5b6058" },
   },
 }
 
@@ -73,6 +78,7 @@ M.ui = {
     seperator_style = "round",
   },
 }
+
 M.nvdash = {
   load_on_startup = true,
   header = {
