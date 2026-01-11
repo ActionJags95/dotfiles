@@ -102,6 +102,7 @@ M.nvdash = {
     { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
     { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
     { txt = "  Restore Session", keys = "r", cmd = "AutoSession restore" },
+    { txt = "󰅗  Close Neovim", keys = "q", cmd = "q" },
     -- more... check nvconfig.lua file for full list of buttons
     { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
 
