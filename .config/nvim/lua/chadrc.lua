@@ -101,7 +101,7 @@ M.nvdash = {
     { txt = "󰈭  Find Word", keys = "fw", cmd = "Telescope live_grep" },
     { txt = "󱥚  Themes", keys = "th", cmd = ":lua require('nvchad.themes').open()" },
     { txt = "  Mappings", keys = "ch", cmd = "NvCheatsheet" },
-    { txt = "  Restore Session", keys = "rs", cmd = "AutoSession restore" },
+    { txt = "  Restore Session", keys = "r", cmd = "AutoSession restore" },
     -- more... check nvconfig.lua file for full list of buttons
     { txt = "─", hl = "NvDashFooter", no_gap = true, rep = true },
 
