@@ -2,19 +2,19 @@
   "output": [
     "eDP-1"
   ],
-  // "height": 35,
   "margin": 6,
   "modules-left": [
     "custom/menu",
-    "hyprland/workspaces"
+    "custom/cava",
+    "custom/media"
   ],
   "modules-center": [
-    "clock",
-    "custom/notification"
+    "hyprland/workspaces"
   ],
   "modules-right": [
-    "backlight",
     "group/hardware",
+    "clock",
+    "custom/notification",
     "custom/power"
   ],
   "group/hardware": {
@@ -22,7 +22,6 @@
     "modules": [
       "network",
       "bluetooth",
-      "pulseaudio",
       "battery"
     ]
   },
@@ -30,71 +29,49 @@
     "format": "󰣇",
     "on-click": "rofi -show drun"
   },
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "format-icons": {
-      "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10"
-    },
-    "sort-by-number": true,
-    "persistent-workspaces": {
-      "*": [
-        1,
-        2
-      ]
-    }
+  "custom/cava": {
+    "exec": "/home/jags/.config/waybar/scripts/waybar_cava.sh 2>/dev/null"
   },
   "custom/media": {
-    "format": "{icon} {text}",
+    "exec": "$HOME/.config/waybar/scripts/player.sh 2>/dev/null",
     "return-type": "json",
+    "format": "{icon} {text}",
     "format-icons": {
-      "chromium": " ",
-      "spotify": "󰓇 "
+      "spotify": "   ",
+      "brave": "󰖟   "
     },
-    "on-click": "playerctl play-pause",
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources/custom_modules folder
+    "on-click": "playerctl play-pause 2>/dev/null"
   },
-  "backlight": {
-    "device": "amdgpu_bl1",
-    "format": "{icon} {percent}%",
-    "format-icons": [
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " ",
-      " "
-    ]
+  "hyprland/workspaces": {
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
   },
   "network": {
+    "format": "{ifname}",
+    "interval": 3,
+    "format-ethernet": "󰀂    Connected",
+    "format-wifi": "{icon}  {essid}",
     "format-icons": [
       "󰤯 ",
       "󰤟 ",
       "󰤢 ",
-      "󰤥 ",
       "󰤨 "
     ],
-    "format": " {icon}",
-    "format-wifi": " {icon}",
-    "format-ethernet": " 󰀂 ",
-    "format-disconnected": " 󰤮 ",
+    "format-disconnected": "󰤭    Disconnected",
+    "format-disabled": "    Offline",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-disconnected": "Disconnected",
-    "interval": 3
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}"
   },
   "bluetooth": {
     "format": " {status}",
@@ -104,23 +81,10 @@
     "format-disabled": "󰂲 off",
     "format-connected": "󰂱",
     "format-connected-battery": "󰂱 {device_battery_percentage}%",
-    "tooltip-format-connected": "󰂱 {device_alias}",
-    "on-click": "blueman-manager"
-  },
-  "pulseaudio": {
-    "format": " {icon}",
-    "format-icons": {
-      "headphone": "󰋋",
-      "default": [
-        "󰕿 ",
-        "󰖀 ",
-        "󰕾 "
-      ]
-    },
-    "format-muted": " 󰖁 ",
-    "on-click": "pavucontrol"
+    "tooltip-format-connected": "󰂱 {device_alias}"
   },
   "battery": {
+    "tooltip": false,
     "interval": 1,
     "states": {
       "warning": 30,
@@ -158,36 +122,16 @@
     }
   },
   "clock": {
-    "format": "  {:%a, %b %d %H:%M}",
-    "format-alt": "{:L%A, %B %d, %Y (%R)} 󰃭 ",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    },
-    "actions": {
-      "on-click-right": "mode",
-      "on-click-forward": "tz_up",
-      "on-click-backward": "tz_down",
-      "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
-  },
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "wlogout --buttons-per-row 6"
+    "format": "    {:%H:%M}",
+    "format-alt": "    {:%A, %B %d, %Y (%R)}",
+    "tootlip": false
   },
   "custom/notification": {
     "format": "󰂚",
     "on-click": "swaync-client --toggle-panel"
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout --buttons-per-row 6"
   }
 }

@@ -1,39 +1,64 @@
 * {
-  font-family: "SF Pro Display", "CaskaydiaCove Nerd Font Propo";
+  font-family: "SF Pro Display";
   font-weight: bold;
   font-size: 10px;
-  border: none;
-  border-radius: 0;
+  background-color: transparent;
 }
 
 window#waybar {
-  background-color: transparent;
   color: #cad3f5;
-  /* border-bottom: 2px solid #8aadf4; */
-  /* margin-top: 5px; */
-}
-
-tooltip {
-  background-color: #24273a;
-  font-family: "CaskaydiaCove Nerd Font";
-  border: 2px solid #8aadf4;
-  border-radius: 15px;
-  font-size: 15px;
 }
 
 #custom-menu,
-#backlight,
+#custom-media,
+#workspaces,
+#hardware,
+#clock,
+#custom-notification,
+#custom-power {
+  background-color: #24273a;
+  padding: 1px 15px;
+  border-radius: 25px;
+  margin: 0px 5px;
+  font-size: 15px;
+}
+
 #network,
 #bluetooth,
-#pulseaudio,
-#battery,
-#clock,
-#custom-power,
-#custom-notification {
+#battery {
   font-size: 15px;
+}
+
+#custom-menu {
+  padding-right: 17px;
+}
+
+#network,
+#bluetooth,
+#battery {
+  margin: 0px 7px;
+}
+
+#custom-menu {
+  padding-left: 14px;
+  color: #8aadf4;
+}
+
+#custom-cava {
+  color: #f5a97f;
   background-color: #24273a;
-  padding: 7px 15px;
-  border-radius: 20px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 25px;
+  padding: 0px 15px;
+  font-family: "Bars";
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+#custom-media {
+  color: #a6da95;
+  margin-left: 10px;
 }
 
 #workspaces {
@@ -54,66 +79,35 @@ tooltip {
 #workspaces button.active {
   background-origin: border-box;
   background-color: #8aadf4;
-  color: #24273a;
+  color: #8aadf4;
   margin: 10px 5px;
   min-height: 1px;
-  padding: 0px 10px;
+  padding: 0px 15px;
   border-radius: 20px;
 }
 
-#workspaces,
-#backlight,
-#hardware,
-#clock {
-  margin: 0px 10px;
-}
-
-#network,
-#pulseaudio {
-  padding: 0px 6px;
-}
-
-#battery {
-  padding: 0px 16px;
-}
-
-#custom-menu,
-#custom-power {
-  margin: 0px 5px;
-}
-
-#pulseaudio,
-#network,
-#battery {
-  margin: 0px 2px;
-}
-
-#custom-menu {
-  color: #8aadf4;
-}
-#backlight {
-  color: #eed49f;
-}
 #network {
   color: #91d7e3;
 }
+
 #bluetooth {
   color: #8aadf4;
 }
-#pulseaudio {
-  color: #c6a0f6;
-}
+
 #battery {
   color: #a6da95;
 }
+
 #clock {
   color: #f5a97f;
-}
-#custom-power {
-  color: #ed8796;
 }
 
 #custom-notification {
   color: #8aadf4;
-  padding: 0px 15px;
+  padding-right: 17px;
+}
+
+#custom-power {
+  color: #ed8796;
+  padding-left: 13px;
 }
