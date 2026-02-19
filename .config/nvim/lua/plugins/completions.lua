@@ -56,7 +56,7 @@ return {
     },
 
     fuzzy = {
-      implementation = "prefer_rust",
+      implementation = "lua",
     },
 
     keymap = {
