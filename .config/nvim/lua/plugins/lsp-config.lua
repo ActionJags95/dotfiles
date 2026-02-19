@@ -19,7 +19,6 @@ return {
       ensure_installed = {
         "bashls",
         "clangd",
-        "cmake",
         "cssls",
         "dockerls",
         "docker_compose_language_service",
@@ -37,6 +36,7 @@ return {
         "tailwindcss",
         "vimls",
         "yamlls",
+        "qmlls",
       },
       automatic_installation = true,
     })
