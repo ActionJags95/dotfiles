@@ -34,12 +34,16 @@ return {
         title_pos = "center",
       },
     })
-
     function _lazygit_toggle()
       lazygit:toggle()
     end
+    vim.keymap.set(
+      "n",
+      "<leader>gl",
+      "<cmd>lua _lazygit_toggle()<CR>",
+      { noremap = true, silent = true, desc = "Open LazyGit" }
+    )
 
-    vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
     local btop = Terminal:new({
       cmd = "btop",
       display_name = " System Monitor ",
