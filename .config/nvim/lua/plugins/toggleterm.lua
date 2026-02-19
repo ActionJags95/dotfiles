@@ -40,6 +40,25 @@ return {
     end
 
     vim.api.nvim_set_keymap("n", "<leader>gl", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+    local btop = Terminal:new({
+      cmd = "btop",
+      display_name = " System Monitor ",
+      hidden = true,
+      direction = "float",
+      float_opts = {
+        border = "curved",
+        title_pos = "center",
+      },
+    })
+    function _btop_toggle()
+      btop:toggle()
+    end
+    vim.keymap.set(
+      "n",
+      "<leader>m",
+      "<cmd>lua _btop_toggle()<CR>",
+      { noremap = true, silent = true, desc = "Open System Monitor" }
+    )
 
     require("toggleterm").setup({
       -- shading_factor = -100,
