@@ -48,27 +48,26 @@ M.base46 = {
     NormalFloat = { bg = "#24273a" },
 
     -- Telescope Theming
-    TelescopeNormal = { bg = "#181926" },
-    TelescopeBorder = { fg = "#181926", bg = "#181926" },
-    TelescopeResultsTitle = { fg = "#181926", bg = "#181926" },
-    TelescopePromptNormal = { bg = "#1e2030" },
-    TelescopePromptPrefix = { bg = "#1e2030" },
-    TelescopePromptBorder = { fg = "#1e2030", bg = "#1e2030" },
+    TelescopeBorder = { fg = "#cad3f5", bg = "none" },
+    TelescopePromptBorder = { fg = "#cad3f5", bg = "none" },
+    TelescopeResultsTitle = { fg = "#27273a", bg = "#a6da95" },
+    TelescopePreviewTitle = { fg = "#27273a", bg = "#8aadf4" },
 
     -- Blink.cmp Theming
-    BlinkCmpMenu = { bg = "#1e2030" },
-    BlinkCmpMenuBorder = { fg = "#8aadf4", bg = "#1e2030" },
-    BlinkCmpDoc = { bg = "#1e2030" },
-    BlinkCmpDocBorder = { fg = "#8aadf4", bg = "#1e2030" },
+    BlinkCmpMenu = { bg = "none" },
+    BlinkCmpMenuBorder = { fg = "#a6adc8", bg = "none" },
+    BlinkCmpDoc = { bg = "none" },
+    BlinkCmpDocBorder = { fg = "#a6adc8", bg = "none" },
 
     -- Status line Theming
     StatusLine = { bg = "#1e2030" },
     St_gitIcons = { fg = "#eed49f" },
 
     -- Bufferline theming
-    TbFill = { bg = "#1e2030" },
-    TbBufOff = { bg = "#1e2030", fg = "#5b6078" },
-    TbBufOffClose = { bg = "#1e2030", fg = "#5b6058" },
+    TbFill = { bg = "#181926" },
+    TbBufOff = { bg = "#24273a", fg = "#5b6078" },
+    TbBufOffClose = { bg = "#27273a", fg = "#5b6058" },
+    TbBufOffModified = { bg = "#27273a", fg = "#ed8796" },
   },
 }
 
