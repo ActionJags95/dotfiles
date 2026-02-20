@@ -13,7 +13,7 @@ button {
   background-origin: border-box;
   margin: 150px 10px;
   border-radius: 10px;
-  color: #fab387;
+  color: #f38ba8;
   text-shadow: none;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@ button:active {
 
 button:hover,
 button:focus {
-  background-color: #fab387;
+  background-color: #f38ba8;
   background-size: 35%;
   color: #24273a;
   /* margin: 130px 0px; */
