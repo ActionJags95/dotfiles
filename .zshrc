@@ -1,3 +1,6 @@
+# Command not fould handler script 
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
 export OMZ="$HOME/.oh-my-zsh"
 
 # Checking for presence of oh-my-zsh
