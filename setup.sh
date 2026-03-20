@@ -16,11 +16,11 @@ echo "
 sleep 2
 
 function check_program() {
-  if yay -Q "$1" 2> /dev/null ; then
+  if pacman -Q "$1" 2> /dev/null ; then
     echo "Already installed $1, proceeding..."
   else
     echo "$1 is not installed, installing $1"
-    yay -S --noconfirm "$1"
+    sudo pacman -S --noconfirm "$1"
   fi
 }
 check_program stow
