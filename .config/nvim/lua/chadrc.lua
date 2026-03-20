@@ -68,6 +68,10 @@ M.base46 = {
     TbBufOff = { bg = "#24273a", fg = "#5b6078" },
     TbBufOffClose = { bg = "#27273a", fg = "#5b6058" },
     TbBufOffModified = { bg = "#27273a", fg = "#ed8796" },
+
+    -- NvimTree Theming
+    NvimTreeNormal = { bg = "#1e2030" },
+    NvimTreeNormalNC = { bg = "#1e2030" },
   },
 }
 
