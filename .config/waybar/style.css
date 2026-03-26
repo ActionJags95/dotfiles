@@ -51,8 +51,9 @@ window#waybar {
   border-right: 0px;
   border-radius: 25px;
   padding: 0px 15px;
+  padding-top: 7px;
   font-family: "Bars";
-  font-size: 22px;
+  font-size: 15px;
   margin-left: 5px;
 }
 
