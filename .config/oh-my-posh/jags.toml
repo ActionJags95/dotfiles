@@ -44,7 +44,7 @@ foreground = "p:text"
 background = "p:surface0"
 leading_diamond = ""
 trailing_diamond = ""
-template = "{{.Icon }} "
+template = "{{.Icon }} {{ .HostName }} "
 
 
 # Directory Structure
