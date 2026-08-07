@@ -1,77 +1,71 @@
-return {
-  "akinsho/toggleterm.nvim",
-  version = "*",
-  lazy = false,
-  opts = {
-    vim.keymap.set(
-      "n",
-      "<leader>th",
-      ":ToggleTerm direction=horizontal<CR>",
-      { noremap = true, silent = true, desc = "Toggle horizontal terminal" }
-    ),
-    vim.keymap.set(
-      "n",
-      "<leader>tv",
-      ":ToggleTerm direction=vertical size=90<CR>",
-      { noremap = true, silent = true, desc = "Toggle vertical terminal" }
-    ),
-    vim.keymap.set(
-      "n",
-      "<leader>tf",
-      ":ToggleTerm direction=float<CR>",
-      { noremap = true, silent = true, desc = "Toggle float terminal" }
-    ),
+vim.pack.add({
+	"https://github.com/akinsho/toggleterm.nvim",
+})
 
-    vim.keymap.set("t", "<leader><Esc>", [[<C-\><C-n>]]),
-  },
-  config = function()
-    local Terminal = require("toggleterm.terminal").Terminal
-    local lazygit = Terminal:new({
-      cmd = "lazygit",
-      display_name = "LazyGit",
-      hidden = true,
-      direction = "float",
-      float_opts = {
-        border = "curved",
-        title_pos = "center",
-      },
-    })
-    function _lazygit_toggle()
-      lazygit:toggle()
-    end
-    vim.keymap.set(
-      "n",
-      "<leader>gl",
-      "<cmd>lua _lazygit_toggle()<CR>",
-      { noremap = true, silent = true, desc = "Open LazyGit" }
-    )
+require("toggleterm").setup({
+	float_opts = {
+		border = "curved",
+		title_pos = "center",
+	},
+})
 
-    local btop = Terminal:new({
-      cmd = "btop",
-      display_name = " System Monitor ",
-      hidden = true,
-      direction = "float",
-      float_opts = {
-        border = "curved",
-        title_pos = "center",
-      },
-    })
-    function _btop_toggle()
-      btop:toggle()
-    end
-    vim.keymap.set(
-      "n",
-      "<leader>m",
-      "<cmd>lua _btop_toggle()<CR>",
-      { noremap = true, silent = true, desc = "Open System Monitor" }
-    )
+vim.keymap.set(
+	"n",
+	"<leader>th",
+	":ToggleTerm direction=horizontal<CR>",
+	{ noremap = true, silent = true, desc = "Toggle horizontal terminal" }
+)
 
-    require("toggleterm").setup({
-      -- shading_factor = -100,
-      float_opts = {
-        border = "curved",
-        title_pos = "center",
-      },
-    })
-  end,
-}
+vim.keymap.set(
+	"n",
+	"<leader>tv",
+	":ToggleTerm direction=vertical size=90<CR>",
+	{ noremap = true, silent = true, desc = "Toggle vertical terminal" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>tf",
+	":ToggleTerm direction=float<CR>",
+	{ noremap = true, silent = true, desc = "Toggle float terminal" }
+)
+
+local Terminal = require("toggleterm.terminal").Terminal
+local lazygit = Terminal:new({
+	cmd = "lazygit",
+	display_name = "LazyGit",
+	hidden = true,
+	direction = "float",
+	float_opts = {
+		border = "curved",
+		title_pos = "center",
+	},
+})
+function _lazygit_toggle()
+	lazygit:toggle()
+end
+vim.keymap.set(
+	"n",
+	"<leader>gl",
+	"<cmd>lua _lazygit_toggle()<CR>",
+	{ noremap = true, silent = true, desc = "Open LazyGit" }
+)
+
+local btop = Terminal:new({
+	cmd = "btop",
+	display_name = " System Monitor ",
+	hidden = true,
+	direction = "float",
+	float_opts = {
+		border = "curved",
+		title_pos = "center",
+	},
+})
+function _btop_toggle()
+	btop:toggle()
+end
+vim.keymap.set(
+	"n",
+	"<leader>m",
+	"<cmd>lua _btop_toggle()<CR>",
+	{ noremap = true, silent = true, desc = "Open System Monitor" }
+)

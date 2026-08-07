@@ -1,16 +1,15 @@
-return {
-  "barrett-ruth/live-server.nvim",
-  build = "npm add -g live-server",
-  cmd = { "LiveServerStart", "LiveServerStop" },
-  lazy = false,
-  config = function()
-    require("live-server").setup()
+vim.pack.add({
+	"https://git.barrettruth.com/barrettruth/live-server.nvim",
+})
 
-    vim.keymap.set(
-      "n",
-      "<leader>ls",
-      ":LiveServerToggle<CR>",
-      { desc = "Toggle live-server in current directory", silent = true, noremap = true }
-    )
-  end,
+vim.g.live_server = {
+	port = 8080,
+	browser = false,
 }
+
+vim.keymap.set(
+	"n",
+	"<leader>ls",
+	":LiveServerToggle<CR>",
+	{ desc = "Toggle Live-Server in current directory", silent = true, noremap = true }
+)
