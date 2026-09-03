@@ -24,7 +24,7 @@ bufferline.setup({
 	},
 	highlights = {
 		fill = {
-			fg = "#ffffff",
+			fg = "#cad3f5",
 			bg = "#181926",
 		},
 		background = {
@@ -32,16 +32,24 @@ bufferline.setup({
 			bg = "#1e2030",
 		},
 		close_button = {
-			fg = "#ffffff",
+			fg = "#cad3f5",
 			bg = "#1e2030",
 		},
 		close_button_selected = {
 			fg = "#cad3f5",
 			bg = "none",
 		},
+		close_button_visible = {
+			fg = "#cad3f5",
+			bg = "#1e2030",
+		},
 		buffer_selected = {
-			fg = "none",
+			fg = "#cad3f5",
 			bg = "none",
+		},
+		buffer_visible = {
+			fg = "#cad3f5",
+			bg = "#1e2030",
 		},
 		separator_selected = {
 			fg = "#181926",
@@ -51,9 +59,17 @@ bufferline.setup({
 			fg = "#181926",
 			bg = "#1e2030",
 		},
+		separator_visible = {
+			fg = "#181926",
+			bg = "#1e2030",
+		},
 		modified = {
 			fg = "#f38ba8",
 			bg = "#1e2030",
+		},
+		modified_visible = {
+			fg = "#f38ba8",
+			bg = "none",
 		},
 		modified_selected = {
 			fg = "#a6e3a1",
