@@ -1,137 +1,281 @@
-{
-  "output": [
-    "eDP-1"
-  ],
-  "margin": 6,
-  "modules-left": [
-    "custom/menu",
-    "custom/cava",
-    "custom/media"
-  ],
-  "modules-center": [
-    "hyprland/workspaces"
-  ],
-  "modules-right": [
-    "group/hardware",
-    "clock",
-    "custom/notification",
-    "custom/power"
-  ],
-  "group/hardware": {
-    "orientation": "horizontal",
-    "modules": [
-      "network",
-      "bluetooth",
-      "battery"
-    ]
-  },
-  "custom/menu": {
-    "format": "󰣇",
-    "on-click": "rofi -show drun"
-  },
-  "custom/cava": {
-    "exec": "/home/jags/.config/waybar/scripts/waybar_cava.sh 2>/dev/null"
-  },
-  "custom/media": {
-    "exec": "$HOME/.config/waybar/scripts/player.sh 2>/dev/null",
-    "return-type": "json",
-    "format": "{icon} {text}",
-    "format-icons": {
-      "spotify": "   ",
-      "brave": "󰖟   "
+[
+    {
+        "name": "internal-display",
+        "output": [
+            "eDP-1"
+        ],
+        "margin": 0,
+        "height": 34,
+        "modules-left": [
+            "custom/menu",
+            "custom/cava",
+            "custom/media"
+        ],
+        "modules-center": [
+            "hyprland/workspaces"
+        ],
+        "modules-right": [
+            "group/hardware",
+            "clock",
+            "custom/notification",
+            "custom/power"
+        ],
+        "group/hardware": {
+            "orientation": "horizontal",
+            "modules": [
+                "network",
+                "bluetooth",
+                "battery"
+            ]
+        },
+        "custom/menu": {
+            "format": "󰣇",
+            "on-click": "rofi -show drun"
+        },
+        "custom/cava": {
+            "exec": "/home/jags/.config/waybar/scripts/waybar_cava.sh 2>/dev/null"
+        },
+        "custom/media": {
+            "exec": "$HOME/.config/waybar/scripts/player.sh 2>/dev/null",
+            "return-type": "json",
+            "format": "{icon} {text}",
+            "format-icons": {
+                "spotify": "   ",
+                "brave": "󰖟   "
+            },
+            "on-click": "playerctl play-pause 2>/dev/null"
+        },
+        "hyprland/workspaces": {
+            "sort-by-number": true,
+            "persistent-workspaces": {
+                "1": [],
+                "2": [],
+                "3": [],
+                "4": [],
+                "5": [],
+                "6": [],
+                "7": [],
+                "8": [],
+                "9": [],
+                "10": []
+            }
+        },
+        "network": {
+            "format": "{ifname}",
+            "interval": 3,
+            "format-ethernet": "󰀂    Connected",
+            "format-wifi": "{icon}  {essid}",
+            "format-icons": [
+                "󰤯 ",
+                "󰤟 ",
+                "󰤢 ",
+                "󰤨 "
+            ],
+            "format-disconnected": "󰤭    Disconnected",
+            "format-disabled": "    Offline",
+            "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+            "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}"
+        },
+        "bluetooth": {
+            "format": " {status}",
+            // "tooltip-format": "{controller_alias}",
+            "format-on": " on",
+            "format-off": "󰂲 off",
+            "format-disabled": "󰂲 off",
+            "format-connected": "󰂱",
+            "format-connected-battery": "󰂱 {device_battery_percentage}%",
+            "tooltip-format-connected": "󰂱 {device_alias}"
+        },
+        "battery": {
+            "tooltip": false,
+            "interval": 1,
+            "states": {
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{icon} {capacity}%",
+            "format-charging": "{icon} {capacity}%",
+            "format-discharging": "{icon} {capacity}%",
+            "format-icons": {
+                "default": [
+                    "󰂃",
+                    "󰁺",
+                    "󰁻",
+                    "󰁼",
+                    "󰁽",
+                    "󰁾",
+                    "󰁿",
+                    "󰂀",
+                    "󰂁",
+                    "󰂂",
+                    "󰁹"
+                ],
+                "charging": [
+                    "󰢜 ",
+                    "󰂆 ",
+                    "󰂇 ",
+                    "󰂈 ",
+                    "󰢝 ",
+                    "󰂉 ",
+                    "󰢞 ",
+                    "󰂊 ",
+                    "󰂋 ",
+                    "󰂅 "
+                ]
+            }
+        },
+        "clock": {
+            "format": "    {:%H:%M}",
+            "format-alt": "    {:%A, %B %d, %Y (%R)}",
+            "tootlip": false
+        },
+        "custom/notification": {
+            "format": "󰂚",
+            "on-click": "swaync-client --toggle-panel"
+        },
+        "custom/power": {
+            "format": "⏻",
+            "on-click": "wlogout --buttons-per-row 6"
+        }
     },
-    "on-click": "playerctl play-pause 2>/dev/null"
-  },
-  "hyprland/workspaces": {
-    "sort-by-number": true,
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": [],
-      "10": []
+    {
+        "name": "external-display",
+        "output": [
+            "DP-2",
+            "DP-4"
+        ],
+        "margin": 0,
+        "height": 28,
+        "modules-left": [
+            "custom/menu",
+            "custom/cava",
+            "custom/media"
+        ],
+        "modules-center": [
+            "hyprland/workspaces"
+        ],
+        "modules-right": [
+            "group/hardware",
+            "clock",
+            "custom/notification",
+            "custom/power"
+        ],
+        "group/hardware": {
+            "orientation": "horizontal",
+            "modules": [
+                "network",
+                "bluetooth",
+                "battery"
+            ]
+        },
+        "custom/menu": {
+            "format": "󰣇",
+            "on-click": "rofi -show drun"
+        },
+        "custom/cava": {
+            "exec": "/home/jags/.config/waybar/scripts/waybar_cava.sh 2>/dev/null"
+        },
+        "custom/media": {
+            "exec": "$HOME/.config/waybar/scripts/player.sh 2>/dev/null",
+            "return-type": "json",
+            "format": "{icon} {text}",
+            "format-icons": {
+                "spotify": "   ",
+                "brave": "󰖟   "
+            },
+            "on-click": "playerctl play-pause 2>/dev/null"
+        },
+        "hyprland/workspaces": {
+            "sort-by-number": true,
+            "persistent-workspaces": {
+                "1": [],
+                "2": [],
+                "3": [],
+                "4": [],
+                "5": [],
+                "6": [],
+                "7": [],
+                "8": [],
+                "9": [],
+                "10": []
+            }
+        },
+        "network": {
+            "format": "{ifname}",
+            "interval": 3,
+            "format-ethernet": "󰀂    Connected",
+            "format-wifi": "{icon}  {essid}",
+            "format-icons": [
+                "󰤯 ",
+                "󰤟 ",
+                "󰤢 ",
+                "󰤨 "
+            ],
+            "format-disconnected": "󰤭    Disconnected",
+            "format-disabled": "    Offline",
+            "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+            "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}"
+        },
+        "bluetooth": {
+            "format": " {status}",
+            // "tooltip-format": "{controller_alias}",
+            "format-on": " on",
+            "format-off": "󰂲 off",
+            "format-disabled": "󰂲 off",
+            "format-connected": "󰂱",
+            "format-connected-battery": "󰂱 {device_battery_percentage}%",
+            "tooltip-format-connected": "󰂱 {device_alias}"
+        },
+        "battery": {
+            "tooltip": false,
+            "interval": 1,
+            "states": {
+                "warning": 30,
+                "critical": 15
+            },
+            "format": "{icon} {capacity}%",
+            "format-charging": "{icon} {capacity}%",
+            "format-discharging": "{icon} {capacity}%",
+            "format-icons": {
+                "default": [
+                    "󰂃",
+                    "󰁺",
+                    "󰁻",
+                    "󰁼",
+                    "󰁽",
+                    "󰁾",
+                    "󰁿",
+                    "󰂀",
+                    "󰂁",
+                    "󰂂",
+                    "󰁹"
+                ],
+                "charging": [
+                    "󰢜 ",
+                    "󰂆 ",
+                    "󰂇 ",
+                    "󰂈 ",
+                    "󰢝 ",
+                    "󰂉 ",
+                    "󰢞 ",
+                    "󰂊 ",
+                    "󰂋 ",
+                    "󰂅 "
+                ]
+            }
+        },
+        "clock": {
+            "format": "    {:%H:%M}",
+            "format-alt": "    {:%A, %B %d, %Y (%R)}",
+            "tootlip": false
+        },
+        "custom/notification": {
+            "format": "󰂚",
+            "on-click": "swaync-client --toggle-panel"
+        },
+        "custom/power": {
+            "format": "⏻",
+            "on-click": "wlogout --buttons-per-row 6"
+        }
     }
-  },
-  "network": {
-    "format": "{ifname}",
-    "interval": 3,
-    "format-ethernet": "󰀂    Connected",
-    "format-wifi": "{icon}  {essid}",
-    "format-icons": [
-      "󰤯 ",
-      "󰤟 ",
-      "󰤢 ",
-      "󰤨 "
-    ],
-    "format-disconnected": "󰤭    Disconnected",
-    "format-disabled": "    Offline",
-    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}"
-  },
-  "bluetooth": {
-    "format": " {status}",
-    // "tooltip-format": "{controller_alias}",
-    "format-on": " on",
-    "format-off": "󰂲 off",
-    "format-disabled": "󰂲 off",
-    "format-connected": "󰂱",
-    "format-connected-battery": "󰂱 {device_battery_percentage}%",
-    "tooltip-format-connected": "󰂱 {device_alias}"
-  },
-  "battery": {
-    "tooltip": false,
-    "interval": 1,
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": "{icon} {capacity}%",
-    "format-discharging": "{icon} {capacity}%",
-    "format-icons": {
-      "default": [
-        "󰂃",
-        "󰁺",
-        "󰁻",
-        "󰁼",
-        "󰁽",
-        "󰁾",
-        "󰁿",
-        "󰂀",
-        "󰂁",
-        "󰂂",
-        "󰁹"
-      ],
-      "charging": [
-        "󰢜 ",
-        "󰂆 ",
-        "󰂇 ",
-        "󰂈 ",
-        "󰢝 ",
-        "󰂉 ",
-        "󰢞 ",
-        "󰂊 ",
-        "󰂋 ",
-        "󰂅 "
-      ]
-    }
-  },
-  "clock": {
-    "format": "    {:%H:%M}",
-    "format-alt": "    {:%A, %B %d, %Y (%R)}",
-    "tootlip": false
-  },
-  "custom/notification": {
-    "format": "󰂚",
-    "on-click": "swaync-client --toggle-panel"
-  },
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "wlogout --buttons-per-row 6"
-  }
-}
+]

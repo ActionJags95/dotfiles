@@ -1,90 +1,114 @@
 * {
   font-family: "SF Pro Display";
   font-weight: bold;
-  font-size: 10px;
+  background-color: transparent;
+  min-height: 0;
+  min-width: 0;
+  padding: 0px 0px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+window#waybar,
+window#waybar > box,
+button,
+label,
+box {
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+window#waybar.empty {
   background-color: transparent;
 }
 
 window#waybar {
   color: #cad3f5;
-}
-
-#custom-menu,
-#custom-media,
-#workspaces,
-#hardware,
-#clock,
-#custom-notification,
-#custom-power {
   background-color: #24273a;
-  padding: 1px 15px;
-  border-radius: 25px;
-  margin: 0px 5px;
+}
+
+window#waybar.external-display {
+  font-size: 10px;
+}
+window#waybar.internal-display {
   font-size: 15px;
-}
-
-#network,
-#bluetooth,
-#battery {
-  font-size: 15px;
-}
-
-#custom-menu {
-  padding-right: 17px;
-}
-
-#network,
-#bluetooth,
-#battery {
-  margin: 0px 7px;
-}
-
-#custom-menu {
-  padding-left: 14px;
-  color: #8aadf4;
-}
-
-#custom-cava {
-  color: #f5a97f;
-  background-color: #24273a;
-  border-left: 0px;
-  border-right: 0px;
-  border-radius: 25px;
-  padding: 0px 15px;
-  padding-top: 7px;
-  font-family: "Bars";
-  font-size: 15px;
-  margin-left: 5px;
-}
-
-#custom-media {
-  color: #a6da95;
-  margin-left: 10px;
 }
 
 #workspaces {
   background-color: #24273a;
-  padding: 0px 15px;
-  border-radius: 20px;
-  font-size: 10px;
+  background-position: center;
+  padding: 0px 5px;
 }
+
 #workspaces button {
-  color: #494d64;
-  background-origin: border-box;
-  background-color: #494d64;
-  margin: 10px 5px;
-  padding: 0px 0px;
-  min-height: 1px;
-  border-radius: 10px;
+  margin: 5px 7px;
 }
+
 #workspaces button.active {
-  background-origin: border-box;
   background-color: #8aadf4;
+  color: #24273a;
+  border-radius: 15px;
+  font-weight: bolder;
+}
+
+window#waybar.internal-display #workspaces button {
+  padding: 0px 6px;
+}
+
+window#waybar.external-display #workspaces button {
+  padding: 0px 5px;
+}
+
+#custom-menu {
+  background-color: #24273a;
   color: #8aadf4;
-  margin: 10px 5px;
-  min-height: 1px;
-  padding: 0px 15px;
-  border-radius: 20px;
+  padding: 0px 10px;
+  padding-right: 12px;
+}
+
+window#waybar.internal-display #custom-menu {
+  padding: 0px 12px;
+  padding-left: 15px;
+}
+
+window#waybar.external-display #custom-menu {
+  font-size: 13px;
+  padding: 0px 10px;
+  padding-left: 13px;
+}
+
+#custom-cava {
+  color: #f5a97f;
+  margin: 2px 10px;
+  padding: 0px 10px;
+}
+
+#custom-media {
+  color: #a6da95;
+  margin: 0px 10px;
+}
+
+window#waybar.external-display #custom-media {
+  font-size: 12px;
+}
+
+#hardware {
+  margin-right: 10px;
+}
+
+window#waybar.external-display #hardware {
+  font-size: 12px;
+}
+
+#network,
+#bluetooth,
+#battery {
+  padding: 0px 5px;
 }
 
 #network {
@@ -92,7 +116,7 @@ window#waybar {
 }
 
 #bluetooth {
-  color: #8aadf4;
+  color: #f5a97f;
 }
 
 #battery {
@@ -100,16 +124,29 @@ window#waybar {
 }
 
 #clock {
+  padding: 0px 13px;
   color: #f5a97f;
 }
 
+window#waybar.external-display #clock {
+  font-size: 13px;
+}
+
 #custom-notification {
+  padding: 0px 10px;
   color: #8aadf4;
-  padding-right: 17px;
+}
+
+window#waybar.external-display #custom-notification {
+  font-size: 13px;
 }
 
 #custom-power {
-  color: #ed8796;
-  padding-left: 13px;
+  padding: 0px 10px;
   padding-right: 15px;
+  color: #ed8796;
+}
+
+window#waybar.external-display #custom-power {
+  font-size: 13px;
 }
